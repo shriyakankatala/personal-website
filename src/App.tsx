@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 const App: React.FC = () => {
     return (
         <div className="App">
+          <img src="/logos/sk.png" alt="Shriya" className="header-logo" />
           <Header />
             <main>
                 <About />

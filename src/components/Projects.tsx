@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
             <div className="bullet">
                 <img src="/logos/PP.png" alt="Profit Peak" />
                 <div>
-                    <p><span className="title">Profit Peak</span><span className="title-sub"> - MHacks 16</span></p>
+                    <p><span className="title"><a href="https://www.youtube.com/watch?v=VtMjJLMttso" target="_blank" rel="noopener noreferrer">Profit Peak</a></span><span className="title-sub"> - MHacks 16</span></p>
                     <p className="description">AI-driven solution for small business owners to determine their optimal price through a single picture of their product</p>
                 </div>
             </div>

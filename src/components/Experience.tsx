@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
                 </div>
             </div>
             <div className="bullet">
-                <img src="/logos/Globalshala-Logo.jpg" alt="GlobalShala" />
+                <img src="/logos/Globalshala-Logo-removebg.png" alt="GlobalShala" />
                 <div>
                     <p className="title"><a href="https://globalshala.com/" target="_blank" rel="noopener noreferrer">GlobalShala</a></p>
                     <p className="description">Software Engineering Intern</p>
