@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sections.css';
 import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 
-const Organizations: React.FC = () => {
+interface OrganizationsProps {
+    darkMode: boolean;
+}
+
+const Organizations: React.FC<OrganizationsProps> = ({ darkMode }) => {
     return (
         <section className="section">
-            <Divider flexItem sx={{ fontSize: '1.6rem', fontWeight: 'bold'}}>ORGANIZATIONS</Divider>
+            {/* <Divider flexItem sx={{ fontSize: '1.6rem', fontWeight: 'bold'}}>ORGANIZATIONS</Divider> */}
+            <Divider
+                flexItem
+                sx={{
+                "&::before, &::after": {
+                    borderColor: darkMode ? '#F2D8FF' : '#581F73', // Adjust border color based on darkMode
+                },
+                }}
+            >
+                <Typography variant="h3" sx={{ fontSize: '1.6rem', fontWeight: 'bold', }} className="divider-sub">ORGANIZATIONS</Typography>
+            </Divider>
             <div className="bullet">
                 <img src="/logos/v1_logo.jpeg" alt="V1 Michigan" />
                 <div>

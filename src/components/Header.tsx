@@ -24,7 +24,7 @@ const Header: React.FC = () => {
                     <DescriptionIcon sx={{ fontSize: 40 }} />
                 </a>
             </div>
-            <Divider flexItem sx={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '20px'}}></Divider>
+            <Divider flexItem sx={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '20px', backgroundColor: '#000'}} className='divider'></Divider>
         </header>
     );
 };

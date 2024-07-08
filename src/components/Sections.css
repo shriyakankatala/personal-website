@@ -41,14 +41,12 @@
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none; /* Remove underline */
-    color: "#000"; /* Inherit the color from the parent element */
+    color: "inherit"; /* Inherit the color from the parent element */
 }
 
 .bullet .title a {
-    font-size: 1.4rem;
-    font-weight: bold;
     text-decoration: none; /* Remove underline */
-    color: #000; /* Inherit the color from the parent element */
+    color: inherit; /* Inherit the color from the parent element */
     position: relative;
 }
 .bullet .title a:hover {
@@ -75,3 +73,34 @@
 .bullet .description {
     font-size: 1.25rem;
 }
+
+@media screen and (max-width: 500px) {
+    .bullet .title {
+        font-size: 1.15rem;
+
+    }
+    .bullet .title-sub {
+        font-size: 1.15rem;
+
+    }
+    .bullet .description {
+        font-size: 1rem;
+    }
+    .divider-sub {
+        font-size: 1.3rem;
+    }
+    .bullet {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: -13px;
+        padding: 10px;
+        transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition for box-shadow and border */
+        border: 1px solid transparent; /* Initial transparent border to maintain consistent layout */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+}
+    

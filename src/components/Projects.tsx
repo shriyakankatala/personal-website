@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sections.css';
 import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+    darkMode: boolean;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     return (
         <section className="section">
-            <Divider flexItem sx={{fontSize: '1.6rem', fontWeight: 'bold'}}>PROJECTS</Divider>
+            {/* <Divider flexItem sx={{fontSize: '1.6rem', fontWeight: 'bold'}}>PROJECTS</Divider> */}
+            <Divider
+                className="divider-sub"
+                flexItem
+                sx={{
+                "&::before, &::after": {
+                    borderColor: darkMode ? '#F2D8FF' : '#581F73', // Adjust border color based on darkMode
+                },
+                }}
+            >
+                <Typography variant="h3" sx={{ fontSize: '1.6rem', fontWeight: 'bold', }} className="divider-sub">PROJECTS</Typography>
+            </Divider>
             <div className="bullet"> 
                 <img src="/logos/closetswap.png" alt="ClosetSwap" />
                 <div>
@@ -20,6 +36,7 @@ const Projects: React.FC = () => {
                     <p className="description">AI-driven solution for small business owners to determine their optimal price through a single picture of their product</p>
                 </div>
             </div>
+            <div margin-bottom='50px' className='extra-space'></div>
         </section>
     );
 };

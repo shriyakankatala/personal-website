@@ -3,12 +3,6 @@
     margin-top: -20px;
     margin-bottom: 15px;
 }
-/* .about p {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: -10px;
-} */
-
 
 .about-content {
     display: flex;
@@ -29,9 +23,10 @@
     margin-top: 20px;
 }
 
-.text {
+.text-container {
     flex: 1; 
     margin-top: 20px;
+    font-size: 1.25rem; /* Default font size */
 }
 
 @media (max-width: 768px) { 
@@ -46,11 +41,10 @@
         margin-bottom: 20px; 
         width: 40%;
     }
-    .text {
+    .text-container {
         flex: 1; 
         margin-top: -5px;
     }
-    
 }
 
 .hyperlink {
@@ -73,4 +67,14 @@
 
 .hyperlink:hover::after {
     width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .text-container {
+        font-size: 1.15rem; /* Smaller font size for screens 500px or less */
+    }
+
+    .text-container p {
+        margin: 0.5rem 0; /* Optional: adjust margins to fit smaller screens */
+    }
 }
