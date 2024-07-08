@@ -31,6 +31,7 @@
 
 .text {
     flex: 1; 
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) { 
@@ -41,9 +42,15 @@
 
     .profile-image {
         margin-right: 0;
+        margin-left: 0;
         margin-bottom: 20px; 
         width: 40%;
     }
+    .text {
+        flex: 1; 
+        margin-top: -5px;
+    }
+    
 }
 
 .hyperlink {
