@@ -15,7 +15,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
     const loadImage = async () => {
       try {
         const logo = darkMode
-          ? await import('./Globalshala-Logo.jpg')
+          ? await import('./gs_dark.png')
           : await import('./Globalshala-Logo-removebg.png');
         setGlobalShalaLogo(logo.default); // Ensure to get the correct path from the imported module
       } catch (error) {
