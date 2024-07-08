@@ -132,7 +132,8 @@ body {
   width: 70px;
   height: auto;
   justify-content: flex-start;
-  margin-left: -15px;
+  margin-left: -20px;
+  margin-top: -5px;
 }
 
 .top-bar {
