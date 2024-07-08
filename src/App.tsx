@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logoLight from './sk.png';
 import logoDark from './sk_dark.png';
+import logoLightweb from './sk.webp';
+import logoDarkweb from './sk_dark.webp';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
@@ -29,16 +31,16 @@ const App: React.FC = () => {
   // Preload images when component mounts
   useEffect(() => {
     const image1 = new Image();
-    image1.src = logoLight;
+    image1.src = logoLightweb;
     const image2 = new Image();
-    image2.src = logoDark;
+    image2.src = logoDarkweb;
   }, []);
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <div className="top-bar">
         <img
-          src={darkMode ? logoDark : logoLight}
+          src={darkMode ? logoDarkweb : logoLightweb}
           alt="Shriya"
           className="header-logo"
         />
