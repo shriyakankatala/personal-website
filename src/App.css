@@ -1,0 +1,22 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f2d8ff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  
+  background-color: #f2d8ff;
+  margin-bottom: 50px;
+  
+}
+
+
+main {
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
