@@ -22,13 +22,14 @@ body {
 .light-mode .hyperlink {
   color: #581F73;
 }
+
 .light-mode .hyperlink::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; 
+  bottom: -2px;
   width: 0;
-  height: 2px; 
+  height: 2px;
   background-color: #581F73;
   transition: width 0.3s ease-in-out;
 }
@@ -38,16 +39,16 @@ body {
 }
 
 .light-mode .bullet .title a:hover {
-  color: #581F73
+  color: #581F73;
 }
 
 .light-mode .bullet .title a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* Adjust this value to place the underline */
+  bottom: -2px;
   width: 0;
-  height: 2px; /* Adjust this value to change the thickness of the underline */
+  height: 2px;
   background-color: #581F73;
   transition: width 0.3s ease-in-out;
 }
@@ -57,10 +58,10 @@ body {
 }
 
 .light-mode .bullet:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 1px;
   border-color: #000;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
 }
 
 .light-mode .divider {
@@ -85,9 +86,9 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; 
+  bottom: -2px;
   width: 0;
-  height: 2px; 
+  height: 2px;
   background-color: #f2d8ff;
   transition: width 0.3s ease-in-out;
 }
@@ -97,16 +98,16 @@ body {
 }
 
 .dark-mode .bullet .title a:hover {
-  color: #f2d8ff
+  color: #f2d8ff;
 }
 
 .dark-mode .bullet .title a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* Adjust this value to place the underline */
+  bottom: -2px;
   width: 0;
-  height: 2px; /* Adjust this value to change the thickness of the underline */
+  height: 2px;
   background-color: #f2d8ff;
   transition: width 0.3s ease-in-out;
 }
@@ -116,16 +117,15 @@ body {
 }
 
 .dark-mode .bullet:hover {
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1); /* Box shadow on hover */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
   border-radius: 1px;
   border-color: #ffffff;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
 }
 
 .dark-mode .divider {
   background-color: #ffffff;
 }
-
 
 /* Shared styles */
 .header-logo {
@@ -144,10 +144,8 @@ body {
 
 .toggle-button {
   background-color: #ccc;
-
   border-radius: 5px;
   cursor: pointer;
-
 }
 
 .toggle-button:hover {
@@ -166,6 +164,7 @@ main {
   background-color: #ccc;
   color: #581F73;
 }
+
 body, .MuiTypography-root {
   font-family: 'Times New Roman', Times, serif !important;
 }

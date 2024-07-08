@@ -34,12 +34,14 @@ const App: React.FC = () => {
     image2.src = logoDark;
   }, []);
 
-  
-
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <div className="top-bar">
-        <img src={darkMode ? logoDark : logoLight} alt="Shriya" className="header-logo" />
+        <img
+          src={darkMode ? logoDark : logoLight}
+          alt="Shriya"
+          className="header-logo"
+        />
         <Button
           className="MuiButton-root toggle-button"
           onClick={toggleMode}
@@ -47,12 +49,12 @@ const App: React.FC = () => {
           sx={{
             backgroundColor: darkMode ? '#000' : '#fff',
             color: darkMode ? '#F2D8FF' : '#581F73',
-            borderRadius: '50%', // Use 50% to make the button circular
-            width: '40px', // Set width to ensure it's a circle
-            height: '62px', // Set height to ensure it's a circle
-            padding: '0', // Remove padding to maintain circle shape
+            borderRadius: '50%',
+            width: '40px',
+            height: '62px',
+            padding: '0',
             '&:hover': {
-              backgroundColor: isHovered ? '#808080' : darkMode ? '#000' : '#fff', // Set hover color only if not clicked
+              backgroundColor: isHovered ? '#808080' : darkMode ? '#000' : '#fff',
             },
             '& .MuiButton-label': {
               display: 'flex',
@@ -67,14 +69,14 @@ const App: React.FC = () => {
           }
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-      ></Button>
+        ></Button>
       </div>
       <Header />
       <main>
         <About />
         <Experience darkMode={darkMode} />
-        <Organizations darkMode={darkMode}/>
-        <Projects darkMode={darkMode}/>
+        <Organizations darkMode={darkMode} />
+        <Projects darkMode={darkMode} />
       </main>
     </div>
   );
