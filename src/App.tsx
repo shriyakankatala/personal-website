@@ -12,6 +12,8 @@ import Projects from './components/Projects';
 import Button from '@mui/material/Button';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import logoLighttransparent from './shriya_kankatala-removebg-preview.png';
+import logoDarktransparent from './sk_dark-removebg-preview.png';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,16 +33,16 @@ const App: React.FC = () => {
   // Preload images when component mounts
   useEffect(() => {
     const image1 = new Image();
-    image1.src = logoLightweb;
+    image1.src = logoLighttransparent;
     const image2 = new Image();
-    image2.src = logoDarkweb;
+    image2.src = logoDarktransparent;
   }, []);
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <div className="top-bar">
         <img
-          src={darkMode ? logoDarkweb : logoLightweb}
+          src={darkMode ? logoDarktransparent : logoLighttransparent}
           alt="Shriya"
           className="header-logo"
         />
