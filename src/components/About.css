@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 500px) {
     .text-container {
-        font-size: 1.15rem; /* Smaller font size for screens 500px or less */
+        font-size: 1rem; /* Smaller font size for screens 500px or less */
     }
 
     .text-container p {
