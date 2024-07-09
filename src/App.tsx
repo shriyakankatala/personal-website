@@ -24,12 +24,6 @@ const App: React.FC = () => {
     setIsHovered(false); // Reset hover state on toggle
   };
 
-  useEffect(() => {
-    // Check system preference for dark mode
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setDarkMode(prefersDarkMode);
-  }, []);
-
   // Preload images when component mounts
   useEffect(() => {
     const image1 = new Image();

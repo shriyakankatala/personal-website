@@ -28,7 +28,6 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
 
   return (
     <section className="section">
-      {/* <Divider flexItem sx={{ fontSize: '1.6rem', fontWeight: 'bold', }}>EXPERIENCE</Divider> */}
       <Divider
         className="divider-sub"
         flexItem
