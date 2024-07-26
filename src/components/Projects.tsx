@@ -33,7 +33,14 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                 <img src="/logos/PP.png" alt="Profit Peak" />
                 <div>
                     <p><span className="title"><a href="https://www.youtube.com/watch?v=VtMjJLMttso" target="_blank" rel="noopener noreferrer">Profit Peak</a></span><span className="title-sub"> - MHacks 16</span></p>
-                    <p className="description">AI-driven solution for small business owners to determine their optimal price through a single picture of their product</p>
+                    <p className="description">AI-driven solution for small business owners to determine their optimal price through a single picture of their product.</p>
+                </div>
+            </div>
+            <div className="bullet">
+                <img src="/logos/cohort.png" alt="Cohort Tracker" />
+                <div>
+                    <p><span className="title"><a href="https://www.figma.com/design/hDn3R28RqskULs5GWjs6dy/V1-Cohort-Tracker?node-id=0-1" target="_blank" rel="noopener noreferrer">Cohort Tracker</a></span><span className="title-sub"> - V1 Platform Team</span></p>
+                    <p className="description">Centralized page for information on V1 Michigan's cohort's attendance, coffee chats, project progress, and assignment implementation with separate interfaces for pledges and members.</p>
                 </div>
             </div>
             <div margin-bottom='50px' className='extra-space'></div>
