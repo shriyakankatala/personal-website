@@ -23,9 +23,10 @@ header {
 }
   
 h1 {
-    margin: 0;
+    margin: 0!important;
     font-size: 4rem;
     text-align: center;
+    display: inline-block;
 }
 
 
@@ -42,3 +43,16 @@ h1 {
     text-decoration: none;
 }
 
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+}

@@ -73,6 +73,24 @@
 .bullet .description {
     font-size: 1.25rem;
 }
+.bullet .link-class {
+    margin-top: 10px; /* Space above the links */
+}
+.bullet .link {
+    text-decoration: underline;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: inherit;
+    position: relative;
+}
+.bullet .link-divider {
+    font-size: 1.15rem;
+}
+.bullet .link:hover {
+    font-weight: 600; /* Make the font bold on hover */
+}
+
+
 
 @media screen and (max-width: 500px) {
     .bullet .title {
@@ -102,5 +120,31 @@
         border-radius: 10px; /* Rounded corners */
     }
 
+    .bullet .link {
+        text-decoration: underline;
+        font-size: 1rem;
+        font-weight: 300;
+        color: inherit;
+        position: relative;
+    }
+    .bullet .link-divider {
+        font-size: 1rem;
+    }
+
 }
     
+@media screen and (max-width: 350px) {
+    .bullet {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-bottom: -13px;
+        padding: 10px;
+        transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition for box-shadow and border */
+        border: 1px solid transparent; /* Initial transparent border to maintain consistent layout */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+}
