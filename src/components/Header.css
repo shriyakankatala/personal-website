@@ -23,10 +23,9 @@ header {
 }
   
 h1 {
-    margin: 0!important;
+    margin: 0;
     font-size: 4rem;
-    text-align: center;
-    display: inline-block;
+    text-align: center; /* Center text within the h1 element */
 }
 
 
