@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// App.tsx
+import React, { useState, useEffect, useRef } from 'react';
 import logoLight from './sk.png';
 import logoDark from './sk_dark.png';
 import logoLightweb from './sk.webp';
@@ -18,6 +19,7 @@ import logoDarktransparent from './sk_dark-removebg-preview.png';
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const fadeInSections = useRef<HTMLDivElement[]>([]);
 
   const toggleMode = () => {
     setDarkMode(!darkMode);
@@ -30,6 +32,27 @@ const App: React.FC = () => {
     image1.src = logoLighttransparent;
     const image2 = new Image();
     image2.src = logoDarktransparent;
+  }, []);
+
+  // Intersection Observer for fade-in effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    fadeInSections.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -71,10 +94,18 @@ const App: React.FC = () => {
       </div>
       <Header />
       <main>
-        <About />
-        <Experience darkMode={darkMode} />
-        <Organizations darkMode={darkMode} />
-        <Projects darkMode={darkMode} />
+        <div className="fade-in-section" ref={(el) => el && fadeInSections.current.push(el)}>
+          <About />
+        </div>
+        <div className="fade-in-section" ref={(el) => el && fadeInSections.current.push(el)}>
+          <Experience darkMode={darkMode} />
+        </div>
+        <div className="fade-in-section" ref={(el) => el && fadeInSections.current.push(el)}>
+          <Organizations darkMode={darkMode} />
+        </div>
+        <div className="fade-in-section" ref={(el) => el && fadeInSections.current.push(el)}>
+          <Projects darkMode={darkMode} />
+        </div>
       </main>
     </div>
   );

@@ -5,6 +5,18 @@ body {
   padding: 0;
 }
 
+/* fade */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(75px); /* Increased translate distance for more dramatic effect */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Longer duration for more noticeable effect */
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Light mode styles */
 .light-mode {
   background-color: #f2d8ff;
